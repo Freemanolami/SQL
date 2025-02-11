@@ -78,19 +78,23 @@ SELECT * FROM Producers1
 
 SELECT * FROM Harvest1
 
-
+--	The year of the wine with Wine_id = 'W003' was incorrectly recorded. Update it to '2022-12-15'.
+  
 UPDATE Wine1
 SET Year = '2022-12-15'
 WHERE Wine_id = 'W003';
 
+-- The Wine table is missing a column to store the price per bottle. Write an SQL statement to add a Price DECIMAL(6,2) column to the Wine table.
+
 ALTER TABLE Wine1
 ADD Price DECIMAL(6, 2);
 
-
+-- 	The Degree column in the Wine table should be changed to FLOAT instead of INT to allow decimal values. Write the SQL statement to modify the column type.
 
 ALTER TABLE Wine1
 ALTER COLUMN Degree FLOAT;
 
+-- The producer with Prod_num = 'P030' has retired and should be removed from the database. Write the SQL statement to delete this producer.
 
 DELETE FROM Harvest1
 WHERE Prod_num = 'P030';
@@ -98,6 +102,7 @@ WHERE Prod_num = 'P030';
 DELETE FROM Producers1
 WHERE Prod_num = 'P030';
 
+-- All Blue wines should be removed from the database. Write the SQL statement to delete them.
 
 DELETE FROM Harvest1
 WHERE Wine_id IN (
@@ -110,15 +115,19 @@ DELETE FROM Wine1
 WHERE Category = 'Blue wine';
 
 
+-- Retrieve all wines produced in 2023 with an alcohol degree greater than 10.
+
 SELECT *
 FROM Wine1
 WHERE YEAR(Year) = 2023 AND Degree > 10;
 
+-- 9.	Retrieve a list of all producers sorted by their last name in descending order.
 
 SELECT *
 FROM Producers1
 ORDER BY Last_name DESC;
 
+-- Write an SQL statement to show the units harvested in multiples of 10 (Divide the unites by 10)
 
 SELECT Harvest_id, Wine_id, Prod_num, Units / 10 AS Units_Multiple_of_10
 FROM Harvest1;
