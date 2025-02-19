@@ -1,6 +1,5 @@
 # SQL Project: Sales and Customer Analytics
 
-Exercise Overview
 This project demonstrates advanced SQL techniques for performing sales and customer analytics. The purpose of the exercises is to develop a robust understanding of SQL queries and database interactions, using complex operations like stored procedures, triggers, views, and advanced querying techniques.
 
 The project is built on a Sales Database, with tables for CUSTOMER, PRODUCT, SALES, SALES_HISTORY, and SALESPERSON. These exercises cover the core tasks necessary for businesses to analyze their sales data, including revenue tracking, customer purchase history, salesperson performance, and product sales trends.
