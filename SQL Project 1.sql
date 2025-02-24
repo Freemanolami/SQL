@@ -1,5 +1,5 @@
 
---- Table Csutomer
+---- Table Customer
 
 CREATE TABLE CUSTOMER
 (
